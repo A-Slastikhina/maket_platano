@@ -1,0 +1,289 @@
+$yellow: #FFC64F;
+$beige: #FEF2D9;
+$black: #1F1F1F;
+$font-family: 'Play';
+
+%common-wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.button {
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    font-family: 'Play';
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+.route__hidden {
+    display: none;
+}
+
+
+.route {
+    background-color: $black;
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.route__wrapper {
+    @extend %common-wrap;
+}
+
+.route__title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $font-family;
+    font-size: calc(16px + 6 * (100vw - 20px)/ 80);
+    word-wrap: break-word;
+    margin-bottom: 40px;
+    text-align: center;
+    transform: scaleY(1.2);
+    letter-spacing: -4px;
+}
+
+%common__route-btn {
+    width: 70%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around; 
+    cursor: pointer;
+
+}
+.route__button{
+    &--taxi{
+        background-color: #FFC64F;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto; 
+        @extend %common__route-btn;
+    }
+    &--transfer {
+        background-color: transparent;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto; 
+        @extend %common__route-btn;
+    }
+    &--trial {
+        background-color: transparent;
+        margin-left: auto;
+        margin-right: auto; 
+        @extend %common__route-btn;
+    }
+}
+
+.route__taxi {
+    margin-top: 30px;
+}
+.route__taxi-list {
+    color: #ffffff;
+}
+
+.route__taxi-item {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.route__taxi-option{
+    font-family: $font-family;
+    text-transform: uppercase;
+    font-weight: bold;  
+    padding-left: 74px;
+    height: 45.6px;
+    background-image: url('../img/route/bus-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -2px;
+
+}
+.route__taxi-more  {
+    font-family: $font-family;
+    font-weight: bold;  
+    letter-spacing: -1px;   
+}
+
+
+.route__transfer {
+    margin-top: 30px;
+    color: #ffffff;
+    font-family: $font-family;
+    font-weight: bold;
+}
+
+.route__text {
+    color: #ffffff;
+    font-weight:bold;
+    font-size: 22px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    font-family: $font-family;
+    }
+
+.route__buy-button {
+    background-color: $yellow;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 60%;
+    margin-top: 30px;
+    &:hover {
+        transition: 0.8s;
+        background-color: #FF9900;
+    }
+}
+
+.route__transfer-list {
+    margin-top: 30px;
+}
+.route__transfer-item {
+    padding-left: 45px;
+    height: 25.6px;
+    background-image: url('../img/route/small-bus-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.route__trial {
+    margin-top: 30px;
+}
+.route__trial-go-to {
+    color: $yellow;
+    font-size: 22px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    font-family: $font-family;
+    margin-top: 35px;
+}
+
+.route__trial-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.route__trial-btn {
+    @extend %common__route-btn;
+    width: 45%;
+    text-align: center;
+    &:hover {
+        transition: 0.8s;
+        background-color: $yellow;
+    }
+}
+
+.route__map-pic {
+    width: 80%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    &:active {
+        transform: scale(1.5);
+        transition: all 1s;
+    }
+}
+
+
+@media(min-width: $min-width) {
+.route{
+    min-height: 100vh;
+}
+.route__wrapper {
+    max-width: 1258px;
+
+}
+.route__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 111px;
+    text-align: start;
+    margin-bottom: 60px;
+}
+.route__inner {
+display: grid;
+align-items: center;
+grid-template-columns: 1fr 1fr;
+margin-top: 30px;
+}
+
+.route__button{
+    &--taxi{
+        width: 251px;
+        display: inline-flex;
+    }
+    &--transfer{
+        width: 173px;
+        display: inline-flex;
+    }
+    &--trial{
+        width: 270px;
+        display: inline-flex;
+    }   
+}
+
+//Карточки вариантов маршрутов - начало
+
+.route__taxi-item{
+    margin-bottom: 75px;
+}
+.route__taxi-option {
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -3px;
+}
+.route__taxi-more {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.route__buy-button {
+    max-width: 196px;
+}
+.route__transfer{
+    max-width: 371px;
+}
+.route__text {
+    font-size: 30px;
+}
+.route__transfer-item {
+    font-size: 16px;
+    margin-top: 50px;
+}
+.route__trial {
+    max-width: 413px;
+}
+.route__trial-go-to{
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+
+//Карточки вариантов маршрутов - конец
+
+.route__map-pic {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    max-width: 625px;
+    max-height: 450px;
+}
+}

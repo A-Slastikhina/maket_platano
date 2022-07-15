@@ -1,0 +1,391 @@
+$yellow: #FFC64F;
+$font-family: 'Play' ;
+
+%common-wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.guests {
+    min-height: 100vh;
+background-color: $yellow;
+padding-bottom: 60px;
+}
+
+.guests__wrapper {
+   @extend %common-wrap;
+   padding-top: 100px;
+}
+
+
+
+.guests__headliners-list {
+    display: flex;
+    overflow: hidden;
+    list-style-type: none;
+    justify-content: space-between;
+   
+}
+.guests__headliners-img {
+    overflow: hidden;
+}
+
+.guests__singers-list {
+    display: flex;
+    overflow: hidden;
+    list-style-type: none;
+    justify-content: space-between;
+
+}
+
+.guests__title {
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $font-family;
+    font-size: calc(16px + 6 * (100vw - 20px)/ 80);
+    word-wrap: break-word;
+    margin-bottom: 40px;
+    text-align: center;
+    transform: scaleY(1.2);
+    letter-spacing: -4px;
+} 
+
+
+.guests__headliners-name {
+    color: #ffffff;
+    font-size: 33px;
+    word-break: break-all;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    bottom: 7%;
+    height: 54px;
+    letter-spacing: -3px; 
+    transform: scaleY(1.4);
+}
+
+//Начло кода анимация - появление даты
+
+.guests__headliners--wrap-1 {
+    &:hover::before {
+       content: '';
+       background-image: url('../img/Headliners/Artists/magicool-date.png');
+        width: 293px;
+        height: 293px;
+        position: absolute;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+
+    }
+}
+.guests__headliners--wrap-1:hover img  {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.guests__headliners--wrap-2 {
+&:hover::before {
+    content: '';
+    background-image: url('../img/Headliners/Artists/manu-date.png');
+     width: 293px;
+     height: 293px;
+     position: absolute;
+     background-repeat: no-repeat;
+     transition: 0.3s;
+}
+}
+.guests__headliners--wrap-2:hover img  {
+opacity: 0;
+transition: 0.3s;
+
+}
+.guests__headliners--wrap-3 {
+&:hover::before {
+    content: '';
+    background-image: url('../img/Headliners/Artists/belki-date.png');
+     width: 293px;
+     height: 293px;
+     position: absolute;
+     background-repeat: no-repeat;
+     transition: 0.3s;
+}
+}
+.guests__headliners--wrap-3:hover img {
+opacity: 0;
+transition: 0.3s;
+}
+.guests__headliners--wrap-4 {
+&:hover::before {
+    content: '';
+    background-image: url('../img/Headliners/Artists/plush-date.png');
+     width: 293px;
+     height: 293px;
+     position: absolute;
+     background-repeat: no-repeat;
+     transition: 0.3s;
+}
+}
+.guests__headliners--wrap-4:hover img {
+opacity: 0;
+transition: 0.3s;
+}
+
+.guests__singers--wrap-1 {
+    &:hover::before {
+        content: '';
+        background-image: url('../img/Headliners/Singers/one-love-date.png');
+        width: 151px;
+        height: 151px;
+        position: absolute;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+    }
+}
+.guests__singers--wrap-1:hover img {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.guests__singers--wrap-2 {
+    &:hover::before {
+        content: '';
+        background-image: url('../img/Headliners/Singers/shishka-date.png');
+        width: 151px;
+        height: 151px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.3s;
+    }
+}
+.guests__singers--wrap-2:hover img {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.guests__singers--wrap-3 {
+    &:hover::before {
+        content: '';
+        background-image: url('../img/Headliners/Singers/uka4alo-date.png');
+        width: 151px;
+        height: 151px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.3s;
+
+    }
+}
+.guests__singers--wrap-3:hover img {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.guests__singers--wrap-4 {
+    &:hover::before {
+        content: '';
+        background-image: url('../img/Headliners/Singers/asomnia-date.png');
+        width: 151px;
+        height: 151px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.3s;
+    }
+}
+.guests__singers--wrap-4:hover img {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.guests__singers--wrap-5 {
+    &:hover::before {
+        content: '';
+        background-image: url('../img/Headliners/Singers/mishenko-date.png');
+        width: 151px;
+        height: 151px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.3s;
+    }
+}
+.guests__singers--wrap-5:hover img {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+//Конец кода анимация - появление даты
+
+.guests__singers-title {
+    color: #111111;
+    font-family: $font-family;
+    font-weight: 900;
+    transform: scaleY(1.2);
+    text-transform: uppercase;
+    font-size: calc(16px + 6 * (100vw - 20px)/ 80);
+    text-align: center;
+    letter-spacing: -4px;
+    margin-bottom: 40px;
+    margin-top: 75px;
+}
+
+.guests__singers-list {
+    list-style-type: none;
+}
+
+.guests__singers-item {
+    width: 233px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guests__singers-img {
+    max-width: 151px;
+    height: 151px;
+}
+
+.guests__singers-name {
+    color: #ffffff;
+    font-size: 29px;
+    word-break: break-all;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    bottom: 7%;
+    height: 54px;
+    letter-spacing: -3px; 
+    transform: scaleY(1.4);  
+}
+
+
+
+
+
+.guests__info-title {
+    color: #111111;
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.guests__info-subtitle {
+    color: #111111;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 25px;
+    letter-spacing: -1px;
+}
+
+.guests__social-list {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style-type: none;
+}
+  
+$min-width: 765px;
+
+
+
+@media(min-width: $min-width) {
+.guests__wrapper {
+    max-width: 1258px;
+}
+.guests__title {
+    font-size: 111px;
+    text-align: start;
+    margin-bottom: 50px;
+}
+.guests__headliners-list {
+    overflow: auto;
+    justify-content: space-between;
+    width: auto;
+    max-width: 1285px;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+.guests__headliners-item{
+    position: relative;
+    width: 295px;
+    &:hover .guests__headliners-name {
+        transform: rotate(-2deg);
+    }
+}
+
+.guests__headliners-img {
+    width: 293px; 
+    height: 293px;
+}
+.guests__headliners-name {
+    bottom: 25px;
+
+}
+
+.guests__singers-title {
+    font-size: 65px;
+    text-align: start;
+    margin-bottom: 50px;  
+}
+.guests__singers-inner {
+    display: grid;
+    max-width: 1254px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.guests__singers-list {
+    display: flex;
+    overflow: auto;
+    justify-content: start;
+    flex-wrap: wrap;
+    max-width: 960px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.guests__singers-title {
+    font-size: 65px;
+    text-align: start;
+    margin-bottom: 50px;  
+}
+.guests__singers-item{
+    width: 185px;
+}
+.guests__singers-name {
+    font-size: 24.5px;
+    z-index: 2;
+}
+
+.guests__info {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.guests__info-title {
+    max-width: 236px;
+    text-align: left;
+}
+.guests__info-subtitle {
+    max-width: 236px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.guests__social-list {
+    justify-content: start;
+}
+
+
+}

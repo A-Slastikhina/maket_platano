@@ -1,0 +1,37 @@
+.toggle {
+    flex-direction: column;   
+    background-image: url('../img/toggle-Line.svg');
+    background-repeat: repeat-y;
+    background-position: center;
+    width: 10px;
+    display: none;
+   }
+   .toggle__item:nth-child(7) {
+    margin-bottom: 0;
+}
+
+.toggle__item {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+$min-width: 765px;
+
+
+@media(min-width: $min-width){
+    .toggle{
+        display: flex;
+        position: fixed;
+        right:17px;
+        top: 250px;
+        z-index: 15;
+    }
+    .toggle__item--active{
+            box-shadow: 0px 0px 15px 10px #ffffff;
+
+        }
+    
+}

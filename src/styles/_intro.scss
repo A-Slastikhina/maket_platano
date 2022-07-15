@@ -1,0 +1,138 @@
+$yellow: #FFC64F;
+$main-font: 'Play';
+$min-width: 765px;
+
+
+
+.intro__button {
+    display: flex;
+    font-size: 26px;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &:hover {
+    transition: 0.8s;
+    color: $yellow;
+    background-color: #ffffff;
+    }
+    &:active {
+    transform: scale(1.2);
+
+    }
+}
+
+
+.intro-toggle {
+ //   position: absolute;
+// left: 95%;
+// top: 20%;
+}
+
+
+.intro {
+width: 100%;
+display: flex;
+flex-direction: column;
+background-image: url('../img/Promo/bg.svg');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.intro__wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+.intro__header {
+display: flex;
+justify-content: flex-end;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.intro__burger {
+background-image: url('../img/Promo/burger-button.svg');
+border: none;
+background-color: transparent;
+width: 25px;
+height: 16.5px;
+cursor: pointer;
+position: fixed;
+left: 6px;
+z-index: 10;
+}
+
+.intro__social-item {
+    display: inline;
+    text-decoration: none;    
+}
+
+.intro__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+&::after {
+content: ' ';
+background-image: url('../img/Promo/date.svg');
+background-position: center;
+width: 100px;
+height: 100px;
+position:relative;
+background-size: contain;
+left: 70%;
+}
+}
+
+@media(min-width: $min-width) {
+    .intro {
+     //   height: 100vh;
+    }
+    .intro__burger {
+        display: none;
+    }
+    .intro__wrapper {
+        display: block;
+        max-width: 1258px;
+    }
+    .intro__header {
+        justify-content: flex-end;
+        padding-top: 50px;
+    }
+    .intro__logo { 
+      // margin-top: 200px;
+       //margin-bottom: 200px;
+        width: 50%;
+        margin-left:auto;
+        margin-right: auto;
+        &::before {
+            content: '';
+            background-image: url('../img/Promo/logo-before.svg');
+            width: 137px;
+            height: 137px;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+            top: -29%;
+            left: -25%;
+        }
+        &::after {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            left: 95%;
+            top: 82%;
+        }
+    }
+    .intro__button {
+     //   margin-bottom: 250px;
+     //   margin-top: 250px;
+    }
+}

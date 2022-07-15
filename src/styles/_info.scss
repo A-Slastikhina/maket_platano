@@ -1,0 +1,107 @@
+
+%common-wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info {
+    min-height: 100vh;
+    background-image: url('../img/Information/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     padding-bottom: 30px;
+     padding-top: 60px;
+}
+
+.info__wrapper  {
+    @extend %common-wrap;
+ }
+
+.info__title {
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $font-family;
+    font-size: calc(16px + 6 * (100vw - 20px)/ 80);
+    word-wrap: break-word;
+    margin-bottom: 40px;
+    text-align: center;
+    transform: scaleY(1.2);
+    letter-spacing: -4px;
+}
+
+.info__countries {
+    color: #111111;
+   font-size: 25px;
+    font-weight: 900;
+    font-family: $font-family;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+
+   
+}
+
+.info__text {
+    color: #111111;
+    font-family: $font-family;    
+    font-size: 14px;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+
+.info__program {
+    color: #111111;
+    font-family: $font-family;    
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+$min-width: 765px;
+@media(min-width: $min-width) {
+    .info__wrapper {
+        max-width: 1258px;
+    }
+    .info__title {
+        font-size: 111px;
+        text-align: left;
+     //   position:relative;
+      
+    }
+    .info__countries {
+        font-size: 55px;
+        letter-spacing: -3px;
+        line-height: 45px;
+    }
+    .info__text {
+        max-width: 450px;
+        font-size: 20px;
+    }
+    .info__program{
+        margin-top: 25px;
+        font-size: 27px;
+        max-width: 450px;
+    }
+}
+
+//Медиа для фото девушки слева
+
+@media(min-width:1050px){
+    .info {
+        position: relative;
+        &::before {
+            content: '';
+            background-image: url('../img/Information/girl.png');
+            position: absolute;
+            width: 700px;
+            height: 750px;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

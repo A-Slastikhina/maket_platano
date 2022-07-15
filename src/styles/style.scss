@@ -1,0 +1,46 @@
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Play', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$yellow: #FFC64F;
+$beige: #FEF2D9;
+$light-gray: #C4C4C4;
+$main-font: 'Play';
+$min-width: 765px;
+
+
+%main-title-desk{
+  font-size: 111px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+body {
+background-color: $yellow;
+
+}
+html  {
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  font-family: 'Play';
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+ul {
+  list-style-type: none;
+}
+@import 'intro.scss', 'toggle', 'guests', 'headlin__slider', 'artists__slider', 'popup-menu','info','map', 'tickets';
+@import 'tickets__slider','route','contacts', 'anim-section-title', 'section-header';
+@import 'normalize';

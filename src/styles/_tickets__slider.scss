@@ -1,0 +1,66 @@
+.tickets__slider {
+width: 255px;
+overflow: hidden;
+margin: 0 auto;
+}
+
+.tickets__slider-line {
+width: 1024px;
+    position: relative;
+    left: 0;
+    transition:  all 1s;
+}
+
+.tickets__slider-btn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 255px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--prev {
+        width: 45%;
+        height: 50px;
+        font-size: 25px;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+            transition: 0.8s;
+            color: $yellow;
+            background-color: #ffffff;
+          
+        }
+    }
+    &--next {
+        width: 45%;
+        height: 50px;
+        font-size: 25px;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+            transition: 0.8s;
+            color: $yellow;
+            background-color: #ffffff;
+          
+        }
+    }
+}
+
+@media(min-width: $min-width){
+        .tickets__slider{
+          width: auto;
+          overflow: auto;
+        }
+        .tickets__slider-line {
+          position: static;
+          left: auto;
+          transition: none;
+          width: auto;
+          overflow: auto;
+        }
+        .tickets__slider-btn {
+          display: none;
+        }
+}
+

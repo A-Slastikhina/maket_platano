@@ -1,0 +1,67 @@
+.singers__slider {
+    width: 233px;
+
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+}
+.singers__slider-line {
+    width: 1165px;
+    position: relative;
+    left: 0;
+    transition: all 1s;
+}
+
+
+.singers__slider-btn{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 293px;
+    margin-left: auto;
+    margin-right: auto; 
+&--prev {
+    background-color: transparent;
+    width: 45%;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        transition: 0.8s;
+        color: $yellow;
+        background-color: #ffffff;
+      
+    }
+}
+&--next {
+    background-color: transparent;
+    width: 45%;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        transition: 0.8s;
+        color: $yellow;
+        background-color: #ffffff;
+      
+    }
+}
+}
+
+@media(min-width: $min-width) {
+    .singers__slider{
+      width: auto;
+      overflow: auto;
+      display: contents;
+    }
+    .singers__slider-line {
+        display: contents;
+      position: static;
+      left: auto;
+      transition: none;
+      width: auto;
+    }
+    .singers__slider-btn {
+      display: none;
+    }
+  }

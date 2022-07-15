@@ -1,0 +1,177 @@
+$yellow: #FFC64F;
+$beige: #FEF2D9;
+$font-family: 'Play';
+
+%common-wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tickets {
+    background-color: $yellow;
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.tickets__wrapper {
+    @extend %common-wrap;
+}
+
+.tickets__title {
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $font-family;
+    font-size: calc(16px + 6 * (100vw - 20px)/ 80);
+    word-wrap: break-word;
+    margin-bottom: 40px;
+    text-align: center;
+    transform: scaleY(1.2);
+    letter-spacing: -4px;
+}
+.tickets__text {
+    display: block;
+    color: #111111;
+    font-family: $font-family;    
+    font-size: 15px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    padding-bottom: 25px;
+
+}
+
+.tickets__price-list {
+    display: flex;
+}
+
+.tickets__price-item {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 255px;
+}
+
+.tickets__price-info {
+ padding-bottom: 10px;
+}
+.tickets__price-date {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    text-align: center;
+    padding-top: 20px;
+}
+.tickets__price-type {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    text-align: center;
+    margin-top: 20px;
+}
+.tickets__price-program {
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tickets__price-text {
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+   color: #C4C4C4;
+   margin-bottom: 10px;
+}
+
+.tickets__price-purchase {
+    border-top: 2px dotted #C4C4C4;
+    padding-bottom: 10px;
+}
+
+.tickets__price-button {
+    background-color: $yellow;
+    padding: 10px 25px 10px 25px;
+    font-size: 15px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    &:hover {
+        transition: 0.8s;
+        background-color: #FF9900;
+    }
+    &:active {
+        transform: scale(1.2);
+    }
+}
+.tickets__price-min {
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-top: 10px;
+
+   margin-bottom: 10px;
+}
+
+@media(min-width: $min-width) {
+    .tickets__wrapper{
+        max-width: 1258px;
+    }
+    .tickets__title {
+        font-size: 111px;
+        text-align: start;
+        margin-bottom: 50px;   
+    }
+    .tickets__text{
+        font-size: 20px;
+        max-width: 633px;
+    }
+    .tickets__price-list{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .tickets__price-item{
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        max-width: 617px;
+        min-width: 500px;
+        overflow: auto;
+        &:hover{
+            transition: all 0.5s;
+            transform: rotate(-5deg);
+        }
+    }
+    .tickets__price-info{
+        flex-grow: 2;
+    }
+    .tickets__price-purchase{
+        flex-grow: 1;
+        border-left: 1px dotted $light-gray;
+        border-top: none;
+    }
+    .tickets__price-date{
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+}
